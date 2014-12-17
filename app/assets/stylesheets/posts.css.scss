@@ -1,0 +1,50 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+#addpostform {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 800px;
+}
+.label {
+  clear: both;
+  float: left;
+  margin: 0px;
+  width: 200px;
+}
+.form {
+  float: right;
+}
+#buttons {
+  float: right;
+  width: 200px;
+}
+#buttons input {
+  clear: both;
+  float: right;
+  margin: 0px 20px 5px 0px;
+  width: 60px;
+}
+#buttons pre {
+  clear: both;
+  float: right;
+  margin: 0px 20px 5px 0px;
+  width: 80px;
+  color: #fedcba;
+}
+#addpostform .form {
+  float: right;
+  width: 600px;
+}
+#preview {
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  width: 840px;
+}

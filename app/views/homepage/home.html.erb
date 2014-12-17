@@ -158,41 +158,5 @@
 	</div>
 	
 	<script>
-		function caldelta(delta) {
-			if (delta == 0 || delta <= 1 && delta >= -1) {
-				return delta;
-			}
-			var neg = false;
-			if (delta < 0) {
-				neg = true;
-				delta = -delta;
-			}
-			delta *= 0.1;
-			if (delta < 1) {
-				delta = 1;
-			}
-			if (neg) {
-				delta = -delta;
-			}
-			return delta;
-		}
-		function scroll(){
-			var t = 500;
-			var offset = $("div#" + "rss").offset();
-			var margin = parseFloat($("div#" + "rss").css("margin-top"));
-			//alert(document.body.scrollTop + " " + offset.top + " " + margin);
-			var d = document.documentElement.scrollTop || document.body.scrollTop;
-			var delta = caldelta(d - offset.top);
-			margin += delta;
-			if (margin < 30) {
-				margin = 30;
-			}
-			if (delta != 0 && margin != 30) {
-				t = 10;
-			}
-			$("div#" + "rss").css("margin-top", margin + "px");
-			$("div#" + "index").css("margin-top", margin + "px");
-			setTimeout(arguments.callee, t);
-		}
 		scroll();
 	</script>

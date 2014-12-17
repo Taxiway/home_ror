@@ -1,0 +1,41 @@
+<h1>New Post</h1>
+
+<div id="addpostform">
+  <%= form_for(@post) do |f| %>
+    <%= f.label :date, class: "label" %>
+    <div class="form">
+    <%= f.date_field :date, value: Date.current()%>
+    </div>
+    
+    <%= f.label :pre, class: "label" %>
+    <div class="form">
+    <%= f.text_area :pre, rows: "10", cols: "80" %>
+    </div>
+    
+    <%= f.label :content, class: "label" %>
+    <div class="form">
+    <%= f.text_area :content, rows: "20", cols: "80" %>
+    </div>
+    
+    <div id="buttons">
+	  <pre>Tags</pre>
+	  <input type="button" name="p" value="p" onclick="addTag(this)"></button>
+	  <input type="button" name="ul" value="ul" onclick="addTag(this)"></button>
+	  <input type="button" name="ol" value="ol" onclick="addTag(this)"></button>
+	  <input type="button" name="li" value="li" onclick="addTag(this)"></button>
+	  <input type="button" name="a" value="a" onclick="addTag(this)"></button>
+	  <pre>Special Char</pre>
+	  <input type="button" name="t" value="\t" onclick="addContent('\t')"></button>
+	</div>
+
+    <div class="form">
+      <input type="button" value="Preview" onclick="showPreview()"></input>
+      <%= f.submit :onclick => "return confirm('Are you sure?')" %>
+    </div>
+  <% end %>
+  
+  <div id="preview">
+    <div class="paragraph">
+    </div>
+  </div>
+</div>
