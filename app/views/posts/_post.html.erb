@@ -1,4 +1,4 @@
-<div class="paragraph" id=<%=post.id%>>
-<h2 class="date"><%=post.date%></h2>
-<%= raw post.content%>
+<div class="paragraph" id="p<%=post.id%>">
+	<h2 class="date"><%=post.date.to_s.gsub('-') {'.'}%></h2>
+	<%= raw post.content%>
 </div>

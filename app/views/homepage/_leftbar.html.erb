@@ -2,6 +2,13 @@
 	<div id="index">
 		<p class="center" onclick="toggleList('index')">Index</p>
 		<ul>
+			<% @posts.each do |post| %>
+				<li>
+					<a href="#p<%= post.id %>">
+						<%= post.date.to_s.gsub('-') {'.'} %>
+					</a>
+				</li>
+			<% end %>
 		</ul>
 	</div>			
 	<%= render 'links'%>			
