@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141217063806) do
   create_table "posts", force: true do |t|
     t.text     "content"
     t.text     "pre"
-    t.datetime "date"
+    t.date     "date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
